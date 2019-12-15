@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Putovanja</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/main.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link runat="server" href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link runat="server" href="~/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><a href="index.html">Putovanja</a></div>
+        <a href="#menu"><span>Menu</span></a>
+    </header>
+
+
+    <!-- Banner -->
+    <!--
+        Note: To show a background image, set the "data-bg" attribute below
+        to the full filename of your image. This is used in each section to set
+        the background image.
+    -->
+    <section id="banner" class="bg-img" data-bg="banner1.jpg">
+        <div class="inner">
+            <header>
+                <h1>Potreban vam je odmor?</h1>
+                <h3>na pravom ste mestu</h3>
+            </header>
+        </div>
+        <a href="#one" class="more">Pročitaj više</a>
+    </section>
+
+
+    @RenderBody()
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+
+            <h2>Kontaktirajte nas</h2>
+
+            <form action="#" method="post">
+
+                <div class="field half first">
+                    <label for="name">Ime</label>
+                    <input name="name" id="name" type="text" placeholder="Ime">
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" placeholder="Email">
+                </div>
+                <div class="field">
+                    <label for="message">Poruka</label>
+                    <textarea name="message" id="message" rows="6" placeholder="Poruka"></textarea>
+                </div>
+                <ul class="actions">
+                    <li><input value="Pošalji" class="button alt" type="submit"></li>
+                </ul>
+            </form>
+
+            <ul class="icons">
+                <li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+
+         @{ 
+             Html.RenderPartial("_foot");
+         }
+
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+</body>
+</html>
